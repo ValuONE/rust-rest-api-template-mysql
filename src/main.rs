@@ -3,11 +3,14 @@ use actix_web::{App, HttpServer};
 use actix_web::web::Data;
 use actix_web_httpauth::middleware::HttpAuthentication;
 
+use crate::api::todo::*;
 use crate::utility::middleware::middleware;
 use crate::utility::setup::setup;
 
+mod model;
 mod utility;
 mod repository;
+mod api;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -26,6 +29,11 @@ async fn main() -> std::io::Result<()> {
             .wrap(middleware)
             .wrap(cors)
             .app_data(Data::new(app_state.clone()))
+            .service(update_todo)
+            .service(delete_todo)
+            .service(create_todo)
+            .service(get_all_todos)
+            .service(get_todo_by_id)
     })
         .bind((config.ip, config.port))?
         .run()
