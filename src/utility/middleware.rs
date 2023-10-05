@@ -7,7 +7,7 @@ pub async fn middleware(
     credentials: BearerAuth,
 ) -> Result<ServiceRequest, (actix_web::Error, ServiceRequest)> {
     if validate_token(credentials.token()) {
-        log::info!("{} called {} endpoint", req.peer_addr().map_or("Unknown ip".to_string(), |addr| addr.to_string()), req.uri());
+        log::info!("{} called {} endpoint with {} method", req.peer_addr().map_or("Unknown ip".to_string(), |addr| addr.to_string()), req.uri(), req.method());
 
         return Ok(req);
     }
