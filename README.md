@@ -47,6 +47,7 @@ the database library. It's designed to demonstrate how to create a simple yet po
 2. **Use template and create repository**:
     - Click on ``Use this template`` and create a new repository
     - In the new repository click on ``Code``, copy the https link
+
    ```bash
    git clone <https-link>
    cd <project-title>
@@ -55,10 +56,12 @@ the database library. It's designed to demonstrate how to create a simple yet po
 3. **Open the folder with a terminal**
     - Make sure your database is running
     - Install the SQLX-CLI
+
    ```bash
    cargo install sqlx-cli
    ```
     - Create new database and apply migration
+
    ```bash
    sqlx database create --database-url mysql://root:@localhost:3306/<your_database_name>
    
@@ -67,6 +70,7 @@ the database library. It's designed to demonstrate how to create a simple yet po
 
 4. **Setup environment variables**
     - Set following environment variables
+
    ```
    "IP" (default: 127.0.0.1)
    "PORT" (default: 4000)
@@ -75,6 +79,7 @@ the database library. It's designed to demonstrate how to create a simple yet po
 
 5. **Run application**
     - To run the application just enter follow command
+
    ```bash
    cargo run
    ```
