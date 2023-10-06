@@ -65,6 +65,7 @@ impl Todo {
             .await?;
 
         match query.rows_affected() {
+            0 => Err(Box::new(ApiError::TodoNotFound)),
             1 => Ok(BoolResponse::new(true)),
             _ => Ok(BoolResponse::new(false))
         }
