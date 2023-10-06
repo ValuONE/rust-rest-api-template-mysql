@@ -30,13 +30,8 @@ the database library. It's designed to demonstrate how to create a simple yet po
 - **Error Handling**: Robust error handling for better API reliability.
 - **CRUD example**: Implemented example model to showcase CRUD operation.
 
-## Built With
-
-- [Rust](https://www.rust-lang.org/) - A systems programming language.
-- [Actix-Web](https://actix.rs/) - A powerful and flexible web framework for Rust.
-- [SQLX](https://github.com/launchbadge/sqlx) - An asynchronous, pure Rust SQL library with compile-time checked
-  queries.
-- [MySQL](https://www.mysql.com/) - A popular open-source relational database management system.
+## Todos
+   - Create tutorial video
 
 ## Use as template
 
@@ -87,6 +82,14 @@ the database library. It's designed to demonstrate how to create a simple yet po
 6. **Test enpoints**
     - Now you can enter ``http://<IP>:<PORT>/todo`` to test the get all todo endpoints
     - If you want to try out every endpoint just use the postman collection provided under tests
+
+## Built With
+
+- [Rust](https://www.rust-lang.org/) - A systems programming language.
+- [Actix-Web](https://actix.rs/) - A powerful and flexible web framework for Rust.
+- [SQLX](https://github.com/launchbadge/sqlx) - An asynchronous, pure Rust SQL library with compile-time checked
+  queries.
+- [MySQL](https://www.mysql.com/) - A popular open-source relational database management system.
 
 ## Author
 
